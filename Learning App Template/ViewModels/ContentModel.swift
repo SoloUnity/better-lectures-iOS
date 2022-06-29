@@ -9,13 +9,21 @@ import Foundation
 
 class ContentModel: ObservableObject{
     
+    // List of modules
     @Published var modules = [Module]()
-    var styleData: Data? //Initially nil
+    
+    // Current module
+    @Published var currentModule: Module?
+    var currentModuleIndex = 0
+    
+    
+    var styleData: Data?
     
     init(){
         getLocalData()
     }
     
+    // MARK: Data Methods
     func getLocalData(){
         // Get a url to the json file
         let jsonUrl = Bundle.main.url(forResource: "data", withExtension: "json")
@@ -55,4 +63,23 @@ class ContentModel: ObservableObject{
        
         
     }
+    
+    // MARK: Module Navigation Methods
+    func beginModule(_ moduleid:Int) {
+        
+        // Find the index for this module id
+        for index in 0..<modules.count {
+            
+            if modules[index].id == moduleid {
+            
+                // Found the matching module
+                currentModuleIndex = index
+                break
+            }
+        }
+        
+        // Set the current module
+        currentModule = modules[currentModuleIndex]
+    }
+
 }
