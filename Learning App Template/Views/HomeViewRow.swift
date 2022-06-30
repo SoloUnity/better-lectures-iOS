@@ -17,7 +17,7 @@ struct HomeViewRow: View {
     
     var body: some View {
         
-        ZStack {
+        ZStack(alignment: .leading) {
             
             Rectangle()
                 .foregroundColor(.white)
@@ -46,6 +46,7 @@ struct HomeViewRow: View {
                     // Description
                     Text(description)
                         .padding(.bottom, 20)
+                        .multilineTextAlignment(.leading)
                         .font(.caption)
                     
                     // Icons
