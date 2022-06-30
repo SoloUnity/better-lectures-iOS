@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8B26BDCA286E387A00FDD816 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B26BDC9286E387A00FDD816 /* AVKit.framework */; };
 		8B26BDCC286E397F00FDD816 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B26BDCB286E397F00FDD816 /* Constants.swift */; };
+		8B26BE09286E435500FDD816 /* CodeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B26BE08286E435500FDD816 /* CodeTextView.swift */; };
 		8B4E2080286CE11B0087C9DF /* LearningTemplateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4E207F286CE11B0087C9DF /* LearningTemplateApp.swift */; };
 		8B4E2084286CE11C0087C9DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B4E2083286CE11C0087C9DF /* Assets.xcassets */; };
 		8B4E2087286CE11C0087C9DF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B4E2086286CE11C0087C9DF /* Preview Assets.xcassets */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		8B26BDC9286E387A00FDD816 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		8B26BDCB286E397F00FDD816 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8B26BE08286E435500FDD816 /* CodeTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTextView.swift; sourceTree = "<group>"; };
 		8B4E207C286CE11B0087C9DF /* Learning App Template.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Learning App Template.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B4E207F286CE11B0087C9DF /* LearningTemplateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningTemplateApp.swift; sourceTree = "<group>"; };
 		8B4E2083286CE11C0087C9DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				8B4E209F286CF74C0087C9DF /* ContentView.swift */,
 				8B4E209E286CF74C0087C9DF /* ContentViewRow.swift */,
 				8B4E20A2286CFBB30087C9DF /* ContentDetailView.swift */,
+				8B26BE08286E435500FDD816 /* CodeTextView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				8B4E20A1286CF74C0087C9DF /* ContentView.swift in Sources */,
 				8B4E20A3286CFBB30087C9DF /* ContentDetailView.swift in Sources */,
 				8B4E2093286CE2D50087C9DF /* ContentModel.swift in Sources */,
+				8B26BE09286E435500FDD816 /* CodeTextView.swift in Sources */,
 				8B4E2099286CE7470087C9DF /* Models.swift in Sources */,
 				8B4E20A0286CF74C0087C9DF /* ContentViewRow.swift in Sources */,
 				8B26BDCC286E397F00FDD816 /* Constants.swift in Sources */,
