@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B2289A228736B8600E16DA2 /* TestResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2289A128736B8600E16DA2 /* TestResultView.swift */; };
 		8B26BDCA286E387A00FDD816 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B26BDC9286E387A00FDD816 /* AVKit.framework */; };
 		8B26BDCC286E397F00FDD816 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B26BDCB286E397F00FDD816 /* Constants.swift */; };
 		8B26BE09286E435500FDD816 /* CodeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B26BE08286E435500FDD816 /* CodeTextView.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B2289A128736B8600E16DA2 /* TestResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResultView.swift; sourceTree = "<group>"; };
 		8B26BDC9286E387A00FDD816 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		8B26BDCB286E397F00FDD816 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8B26BE08286E435500FDD816 /* CodeTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTextView.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				8B4E209E286CF74C0087C9DF /* ContentViewRow.swift */,
 				8B4E20A2286CFBB30087C9DF /* ContentDetailView.swift */,
 				8B7263B428733AC900B5814C /* TestView.swift */,
+				8B2289A128736B8600E16DA2 /* TestResultView.swift */,
 				8B26BE08286E435500FDD816 /* CodeTextView.swift */,
 				8BA6F86E286E55220025BE34 /* RectangleCard.swift */,
 			);
@@ -228,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B7263B528733AC900B5814C /* TestView.swift in Sources */,
+				8B2289A228736B8600E16DA2 /* TestResultView.swift in Sources */,
 				8B4E20A7286CFD520087C9DF /* HomeView.swift in Sources */,
 				8B4E209C286CEDE90087C9DF /* HomeViewRow.swift in Sources */,
 				8B4E2080286CE11B0087C9DF /* LearningTemplateApp.swift in Sources */,
