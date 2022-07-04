@@ -134,6 +134,24 @@ class ContentModel: ObservableObject{
         
     }
     
+    func nextQuestion(){
+        // Advance the question index
+        currentQuestionIndex += 1
+        
+        // Check that it's within the range of questions
+        if currentQuestionIndex < currentModule!.test.questions.count{
+            // set the current question
+            currentQuestion = currentModule!.test.questions[currentQuestionIndex]
+            codeText = addStyling(currentQuestion!.content)
+        }
+        else{
+            // If not, then reset the properties
+            currentQuestionIndex = 0
+            currentQuestion = nil
+        }
+        
+    }
+    
     func nextLesson(){
         // Advane the lesson
         currentLessonIndex += 1

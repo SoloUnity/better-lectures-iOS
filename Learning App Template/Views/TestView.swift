@@ -74,19 +74,32 @@ struct TestView: View {
                 // Button
                 Button {
                     
-                    submitted = true
                     
-                    // Check the answer and increment the counter if correct
-                    if selectedAnswerIndex == model.currentQuestion!.correctIndex{
-                        numCorrect += 1
+                    if submitted == true{
+                        // Answer has already been submittes, move to next question
+                        model.nextQuestion()
+                        
+                        // Rest properties
+                        submitted = false
+                        selectedAnswerIndex = nil
                     }
+                    else{
+                        // Submit answer
+                        submitted = true
+                        
+                        // Check the answer and increment the counter if correct
+                        if selectedAnswerIndex == model.currentQuestion!.correctIndex{
+                            numCorrect += 1
+                        }
+                    }
+                    
                     
                 } label: {
                     ZStack{
                         RectangleCard(color: .green)
                             .frame(height: 48)
                         
-                        Text("Submit")
+                        Text(buttonText)
                             .bold()
                     }
                     .padding()
@@ -100,6 +113,21 @@ struct TestView: View {
         else{
             // Test hasn't loaded yet (loading circle)
             ProgressView()
+        }
+    }
+    
+    var buttonText:String{
+        
+        //Check if answer has been submitted
+        if submitted == true{
+            if model.currentQuestionIndex + 1 == model.currentModule!.test.questions.count{
+                // Last Question
+                return "View Score"
+            }
+            return "Next"
+        }
+        else{
+            return "Submit"
         }
     }
 }
