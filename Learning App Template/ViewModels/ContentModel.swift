@@ -35,7 +35,12 @@ class ContentModel: ObservableObject{
     
     
     init(){
+        
+        // Parse local JSON file
         getLocalData()
+        
+        // Download / parse remote JSON file
+        getRemoteData()
     }
     
     // MARK: Data Methods
@@ -76,6 +81,56 @@ class ContentModel: ObservableObject{
         }
         
        
+        
+    }
+    
+    func getRemoteData(){
+        
+        // String path
+        let urlString = "https://solounity.github.io/learning-app-template-data/data2.json"
+        
+        // URL object
+        let url = URL(string: urlString)
+        
+        guard url != nil else{
+            // Couldnt create url
+            return
+        }
+        
+        // URLRequest object
+        let request = URLRequest(url: url!)
+        
+        // Get the session and kick off the task
+        let session = URLSession.shared
+        
+        let dataTask = session.dataTask(with: request) { data, response, error in
+            
+            // Check if there is an error
+            guard error == nil else{
+                // There was an error
+                return
+            }
+            // Handle response
+            do{
+                let decoder = JSONDecoder()
+                
+                let modules = try decoder.decode([Module].self, from: data!)
+                
+                // Background thread
+                DispatchQueue.main.async{
+                    self.modules += modules
+                }
+                
+            }
+            catch{
+                // Couldn't parse data
+            }
+            
+            
+        }
+        
+        // Kick off data task
+        dataTask.resume()
         
     }
     

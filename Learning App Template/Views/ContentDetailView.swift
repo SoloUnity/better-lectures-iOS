@@ -24,6 +24,7 @@ struct ContentDetailView: View {
             if url != nil{
                 VideoPlayer(player: AVPlayer(url: url!))
                     .cornerRadius(10)
+                    .aspectRatio(CGSize(width: 1920, height: 1080), contentMode: .fit)
             }
             
             //Description
