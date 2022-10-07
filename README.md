@@ -1,6 +1,7 @@
 # Learning-App
 
 See the earlier (lecture focused) iteration of the app: https://github.com/SoloUnity/FinalProject
+
 Learning app that uses Apple Documentation to display it in lessons through a friendly interface for both Swift and SwiftUI alond with videos and quizzes.
 
 <p>
